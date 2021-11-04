@@ -1,0 +1,9 @@
+{
+	"user": {
+		"email": "karine@mailinator.com",
+		"username": "karine",
+		"bio": null,
+		"image": null,
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImthcmluZUBtYWlsaW5hdG9yLmNvbSIsInVzZXJuYW1lIjoia2FyaW5lIiwicGFzc3dvcmQiOiIkMmEkMTAkVGZnZnAwd1ZzL0dEQWdVcWgzMUg5LkdDRkZCblhFRXR2d1llY2RvQVNLSndhRm1xaG9CUkMiLCJiaW8iOm51bGwsImltYWdlIjoiaHR0cHM6Ly9yZWFsd29ybGQtdGVtcC1hcGkuaGVyb2t1YXBwLmNvbS9pbWFnZXMvc21pbGV5LWN5cnVzLmpwZWciLCJpYXQiOjE2MzU4ODg1NTMsImV4cCI6MTY0MTA3MjU1M30.aGZoD-vAFUscb3_TVbzMvcF-pbsEcD0V2rm6ptCRGzo"
+	}
+}
