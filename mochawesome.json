@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-07T00:27:57.817Z",
+    "end": "2021-11-07T00:27:59.189Z",
+    "duration": 1372,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "687add06-830f-459d-9aed-f7a2cca4a084",
+      "title": "",
+      "fullFile": "cypress/integration/api-login.spec.js",
+      "file": "cypress/integration/api-login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d36c478a-4759-4e41-911a-278a413e11d0",
+          "title": "Login - API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login com sucesso",
+              "fullTitle": "Login - API Login com sucesso",
+              "timedOut": null,
+              "duration": 749,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginAPI(email, password).then(response => {\n  expect(response.status).to.equal(200);\n  expect(response.body.user).to.have.property('email');\n  expect(response.body.user).to.have.property('token');\n  expect(response.body.user).to.have.property('username');\n});",
+              "err": {},
+              "uuid": "19627ea1-419d-4914-abf1-28fd39ee9746",
+              "parentUUID": "d36c478a-4759-4e41-911a-278a413e11d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com e-mail incorreto",
+              "fullTitle": "Login - API Login com e-mail incorreto",
+              "timedOut": null,
+              "duration": 257,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginAPI('email@mailinator.com', password).then(response => {\n  expect(response.status).to.equal(403);\n  expect(response.body.errors[\"email or password\"]).to.contain('is invalid');\n});",
+              "err": {},
+              "uuid": "add63f37-2765-4b32-ba12-4e9eed3935eb",
+              "parentUUID": "d36c478a-4759-4e41-911a-278a413e11d0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha incorreta",
+              "fullTitle": "Login - API Login com senha incorreta",
+              "timedOut": null,
+              "duration": 290,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginAPI(email, '12345678').then(response => {\n  expect(response.status).to.equal(403);\n  expect(response.body.errors[\"email or password\"]).to.contain('is invalid');\n});",
+              "err": {},
+              "uuid": "1907df61-bf40-4f6b-bb01-8fb174904881",
+              "parentUUID": "d36c478a-4759-4e41-911a-278a413e11d0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "19627ea1-419d-4914-abf1-28fd39ee9746",
+            "add63f37-2765-4b32-ba12-4e9eed3935eb",
+            "1907df61-bf40-4f6b-bb01-8fb174904881"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1296,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

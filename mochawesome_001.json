@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-07T00:28:06.855Z",
+    "end": "2021-11-07T00:28:18.487Z",
+    "duration": 11632,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "98063df6-8c1f-4431-a35b-13c8b5274cb7",
+      "title": "",
+      "fullFile": "cypress/integration/e2e-login.spec.js",
+      "file": "cypress/integration/e2e-login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a466ca7-a40d-46c2-9613-544a645c0869",
+          "title": "Login - e2e",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login com sucesso",
+              "fullTitle": "Login - e2e Login com sucesso",
+              "timedOut": null,
+              "duration": 6404,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(email, password);\ncy.get(`a[href*=${username}]`);",
+              "err": {},
+              "uuid": "9ad66039-d3ca-44a4-8e25-e8c9a0464137",
+              "parentUUID": "3a466ca7-a40d-46c2-9613-544a645c0869",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com e-mail incorreto",
+              "fullTitle": "Login - e2e Login com e-mail incorreto",
+              "timedOut": null,
+              "duration": 2838,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login('mail@mailinator.com', password);\ncy.get('list-errors[errors*=errors] li').should('contain.text', 'email or password is invalid');",
+              "err": {},
+              "uuid": "9de06e44-f516-439f-b3ec-6b93a24a9729",
+              "parentUUID": "3a466ca7-a40d-46c2-9613-544a645c0869",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha incorreta",
+              "fullTitle": "Login - e2e Login com senha incorreta",
+              "timedOut": null,
+              "duration": 2221,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(email, '123456789');\ncy.get('list-errors[errors*=errors] li').should('contain.text', 'email or password is invalid');",
+              "err": {},
+              "uuid": "ad8bedd2-a0e5-4904-a5c8-f3c1f9a3c4ab",
+              "parentUUID": "3a466ca7-a40d-46c2-9613-544a645c0869",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ad66039-d3ca-44a4-8e25-e8c9a0464137",
+            "9de06e44-f516-439f-b3ec-6b93a24a9729",
+            "ad8bedd2-a0e5-4904-a5c8-f3c1f9a3c4ab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11463,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
