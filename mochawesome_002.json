@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-11-07T00:31:02.423Z",
-    "end": "2021-11-07T00:31:06.746Z",
-    "duration": 4323,
+    "start": "2021-11-07T01:01:28.839Z",
+    "end": "2021-11-07T01:01:32.802Z",
+    "duration": 3963,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ae24e816-1b91-4151-a019-ae972369727c",
+      "uuid": "8aa5e846-a600-44a1-8ad2-8199e97e2f09",
       "title": "",
       "fullFile": "cypress/integration/ui-login.spec.js",
       "file": "cypress/integration/ui-login.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "23a25efb-6f08-402f-a451-bde08b1a8e2a",
+          "uuid": "56f6a87c-8b1c-42a5-a1fa-325a5065d581",
           "title": "Login - UI",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Login com sucesso",
               "fullTitle": "Login - UI Login com sucesso",
               "timedOut": null,
-              "duration": 1984,
+              "duration": 1834,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.loginUI(200, 'login-com-sucesso');\ncy.login('karine@mailinator.com', '123456');\ncy.get('a[href*=karine]').should('contain.text', 'karine');",
               "err": {},
-              "uuid": "1841141a-6d33-49a2-bf69-8fc397f03724",
-              "parentUUID": "23a25efb-6f08-402f-a451-bde08b1a8e2a",
+              "uuid": "987ecd33-fccf-492a-b9d5-89b2fb234d29",
+              "parentUUID": "56f6a87c-8b1c-42a5-a1fa-325a5065d581",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Login com e-mail incorreto",
               "fullTitle": "Login - UI Login com e-mail incorreto",
               "timedOut": null,
-              "duration": 1132,
+              "duration": 1026,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.loginUI(403, 'login-email-incorreto');\ncy.login('mail@mailinator.com', '123456');\ncy.get('list-errors[errors*=errors] li').should('contain.text', 'email or password is invalid');",
               "err": {},
-              "uuid": "98db1003-0f8f-4382-b20e-62b86dc114f9",
-              "parentUUID": "23a25efb-6f08-402f-a451-bde08b1a8e2a",
+              "uuid": "64d2862c-9166-4ebc-a800-045afa82e630",
+              "parentUUID": "56f6a87c-8b1c-42a5-a1fa-325a5065d581",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Login com senha incorreta",
               "fullTitle": "Login - UI Login com senha incorreta",
               "timedOut": null,
-              "duration": 1152,
+              "duration": 1036,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.loginUI(403, 'login-senha-incorreta');\ncy.login('karine@mailinator.com', '123456789');\ncy.get('list-errors[errors*=errors] li').should('contain.text', 'email or password is invalid');",
               "err": {},
-              "uuid": "1fa784fd-fdcc-44ce-8a75-c7ef1e7ff82c",
-              "parentUUID": "23a25efb-6f08-402f-a451-bde08b1a8e2a",
+              "uuid": "0eb50073-f265-47d7-9540-73ab02f2a27d",
+              "parentUUID": "56f6a87c-8b1c-42a5-a1fa-325a5065d581",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1841141a-6d33-49a2-bf69-8fc397f03724",
-            "98db1003-0f8f-4382-b20e-62b86dc114f9",
-            "1fa784fd-fdcc-44ce-8a75-c7ef1e7ff82c"
+            "987ecd33-fccf-492a-b9d5-89b2fb234d29",
+            "64d2862c-9166-4ebc-a800-045afa82e630",
+            "0eb50073-f265-47d7-9540-73ab02f2a27d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 4268,
+          "duration": 3896,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
