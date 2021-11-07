@@ -1,3 +1,17 @@
+Cypress.Commands.add('cadastro', (email, password, username)=>{
+    cy.request({ 
+        method:'POST',
+        url:'https://api.realworld.io/api/users',
+        body:{
+            user:{
+                email: email,
+                password: password,
+                username: username
+            }
+        }
+    })
+})
+
 Cypress.Commands.add('login', (email, password) => {
     cy.get('input[placeholder=Email]').type(email);
     cy.get('input[placeholder=Password]').type(password);

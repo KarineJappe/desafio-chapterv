@@ -1,10 +1,18 @@
 /// <reference types="cypress" />
 
-describe('Login - API', () => {
+var Chance = require('chance')
+var chance =  new Chance()
 
+describe('Login - API', () => {
+    let email = chance.email()
+    let password = chance.string()
+    let username = chance.first()
+
+    before(() => {
+        cy.cadastro(email, password, username)
+    });
     it('Login com sucesso', () => {
-      cy.loginAPI('karine@mailinator.com', '123456').then(response =>{
-          console.log(response);
+      cy.loginAPI(email, password).then(response =>{
           expect(response.status).to.equal(200)
           expect(response.body.user).to.have.property('email')
           expect(response.body.user).to.have.property('token')
@@ -12,13 +20,13 @@ describe('Login - API', () => {
       })
     });
     it('Login com e-mail incorreto', () => {
-        cy.loginAPI('email@mailinator.com', '123456').then(response =>{
+        cy.loginAPI('email@mailinator.com', password).then(response =>{
             expect(response.status).to.equal(403)
             expect(response.body.errors["email or password"]).to.contain('is invalid')
         })
     });
     it('Login com senha incorreta', () => {
-        cy.loginAPI('karine@mailinator.com', '12345678').then(response =>{
+        cy.loginAPI(email, '12345678').then(response =>{
             expect(response.status).to.equal(403)
             expect(response.body.errors["email or password"]).to.contain('is invalid')
         })
